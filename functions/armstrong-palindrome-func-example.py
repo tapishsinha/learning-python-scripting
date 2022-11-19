@@ -17,16 +17,21 @@ def armstrong(number):
         temp = temp // 10
     return sum
 
-number = (int(input('Enter the number:')))
 
-if reverse(number) == number:
-    print(str(number)+' is a Palindrome number')
+try:
+    number = (int(input('Enter the number:')))
 
-else:
-    print(str(number)+' is not a Palindrome number')
+    if reverse(number) == number:
+        print(str(number)+' is a Palindrome number')
 
-if armstrong(number) == number:
-    print(str(number)+' is an Armstrong number')
+    else:
+        print(str(number)+' is not a Palindrome number')
 
-else:
-    print(str(number)+' is not an Armstrong number')
+    if armstrong(number) == number:
+        print(str(number)+' is an Armstrong number')
+
+    else:
+        print(str(number)+' is not an Armstrong number')
+
+except ValueError:
+    print('You entered a non-numeric value')
